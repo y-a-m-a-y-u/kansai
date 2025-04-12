@@ -1,12 +1,114 @@
 .header{
     position: fixed;
-    display:flex;
     top: 0;
     left: 0;
     z-index: 9999;
-    background: #CCC;
-    box-sizing: border-box;
+    width: 100%;
 }
-.header .menu{
-    font-size: larger;
+
+.header-wrap{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+
+.header_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    width: calc(100vw - 120px - 120px - 55px);
+    padding-left: 98px;
+    padding-right: 120px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+    top: 0;
+}
+
+.header_nav .nav{
+    justify-content: center;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-family: fot-tsukuaoldmin-pr6n, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "リュウミン R-KL", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-weight: 700;
+    margin-left: 5vw;
+}
+
+.header_nav ul {
+    display: flex;
+}
+
+.header_nav .nav a{
+    font-family: fot-tsukuaoldmin-pr6n, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "リュウミン R-KL", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+    .header_nav .nav {
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+    .header_nav .nav a {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.header_nav.is_hidden {
+    top: -140px;
+}
+
+.header_nav .nav2 {
+    justify-content: flex-end;
+    font-size: 1.3rem;
+}
+
+
+.header_nav .nav2 a{
+    font-family: fot-tsukuaoldmin-pr6n, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "リュウミン R-KL", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-weight: 700;
+}
+
+.header_nav ul {
+    display: flex;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+    .header_nav .nav2 a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.header_nav .nav2 a {
+    padding: 32px 17px;
+}
+
+.header_nav li a {
+    mix-blend-mode: exclusion;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+.header_logo{
+    padding-left: 55px;
+    width: 190px;
+}
+
+.header_logo h1 {
+    background: url(../public/images/h_logo_white.svg) no-repeat left top;
+    background-size: contain;
 }
