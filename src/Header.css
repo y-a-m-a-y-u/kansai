@@ -33,6 +33,12 @@
     top: 0;
 }
 
+@media screen and (max-width: 1100px) {
+    .header_nav {
+        display: none;
+    }
+}
+
 .header_nav .nav{
     justify-content: center;
     font-size: 18px;
@@ -96,10 +102,9 @@
 }
 
 .header_nav li a {
-    mix-blend-mode: exclusion;
     display: block;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     position: relative;
 }
 
@@ -108,7 +113,17 @@
     width: 190px;
 }
 
-.header_logo h1 {
+.header.is_scrolled .header_logo h1{
     background: url(../public/images/h_logo_white.svg) no-repeat left top;
     background-size: contain;
+}
+
+.header_logo h1 img {
+    opacity: 0;
+    -ms-filter: "alpha(opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+.header.is_scrolled{
+    mix-blend-mode: difference;
 }

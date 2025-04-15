@@ -1,19 +1,363 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './Top.css';
 import useDetectScroll, { Axis } from '@smakss/react-scroll-direction';
 import Header from "./Header";
+import { SimpleVideoPlayer } from "./SimpleVideoPlayer";
+import { NavLink } from "react-router-dom";
 
-//幅1100以上で表示
 function Top(){
+    const [time1, setTime1] = useState(false);
+    const [time2, setTime2] = useState(false);
+    const [time3, setTime3] = useState(false);
+    const [load, setLoad] = useState(false);
+    useEffect(() => {
+        setLoad(true);
+        const timer1 = setTimeout(() => {
+          setTime1(true);
+        }, 100);
+        const timer2 = setTimeout(() => {
+            setTime2(true);
+          }, 1500);
+        const timer3 = setTimeout(() => {
+            setTime3(true);
+          }, 3800);
+    
+        return () => {clearTimeout(timer1);clearTimeout(timer2);clearTimeout(timer3);}; 
+    },[]);
     const { scrollDir, scrollPosition } = useDetectScroll({
       axis: Axis.Y, // Y軸でスクロール方向を検知
     });
     return(
-        <>
-            <div className="top">
-                <Header scroll_dir={scrollDir}/>
+        <div className={`container ${time3 ? "is-finish" : "isnt-finish"}`}>
+            <Header scroll_pos={scrollPosition.top} scroll_dir={scrollDir}/>
+            <div className="contents">
+                <div className="TopVideo">
+                    <SimpleVideoPlayer videoUrl="./images/TopVideo.mp4" Volume={0}  isLoop={true} isAutoPlay={true} isControls={false}/>
+                </div>
+                <div className={`l-kv ${time3 ? "is-finish" : ""} ${time1 ? "is-animate1" : ""} ${time2 ? "is-animate2" : ""} ${load ? "is-load" : ""}`}>
+                    <div className="l-kv__txt1">
+                        <h1>
+                            <img src="./images/logo_white.svg" width={306} height={223}/>
+                        </h1>
+                        <h2>
+                            <span>研</span>
+                            <span>究</span>
+                            <span>発</span>
+                            <span>表</span>
+                            <span>ス</span>
+                            <span>ベ</span>
+                            <span>っ</span>
+                            <span>た</span>
+                            <span>時</span>
+                            <span>は</span>
+                            <span>関</span>
+                            <span>西</span>
+                            <span>せ</span>
+                            <span>い</span>
+                            <span>に</span>
+                            <span>し</span>
+                            <span>よ</span>
+                            <span>う</span>
+                        </h2>
+                    </div>
+                </div>
             </div>
-        </>
+            <NavLink to={"/"} viewTransition>kaka</NavLink>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
     )
 }
 

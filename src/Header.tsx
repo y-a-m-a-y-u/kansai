@@ -1,19 +1,19 @@
 import React from "react";
 import './Header.css';
-import {motion} from 'framer-motion';
 
 type Props = {
-	scroll_dir: string
+	scroll_dir: string;
+    scroll_pos: number;
 }
 
 //幅1100以上で表示
 const Header : React.FC<Props> = props => {
     return(
-        <div className="header">
+        <div className={`header ${props.scroll_pos > window.innerHeight * 0.9 ? 'is_scrolled' : ''}`}>
             <div className="header-wrap">
                 <div className="header_logo">
                     <h1>
-                        <a>
+                        <a href="/">
                             <img src="./images/h_logo_black.svg"></img>
                         </a>
                     </h1>
@@ -25,13 +25,13 @@ const Header : React.FC<Props> = props => {
                             <a href="/onnyoku">温浴</a>
                         </li>
                         <li className="spa">
-                            <a href="/onnyoku">温浴</a>
+                            <a href="/shyokuhin">食品</a>
                         </li>
                         <li className="spa">
-                            <a href="/onnyoku">温浴</a>
+                            <a href="/shyukuhaku ">宿泊</a>
                         </li>
                         <li className="spa">
-                            <a href="/onnyoku">温浴</a>
+                            <a href="/sugoshikata">過ごし方</a>
                         </li>
                     </ul>
                     <ul  className="nav2">
